@@ -13,10 +13,6 @@ public class Main {
 
         array.retrieveEllement(2);
 
-        System.out.println();
-        
-        array.printElements();
-
     }
 }
 
@@ -35,8 +31,8 @@ public class Array_List {
         }
     }
 
-    void retrieveEllement(int index) {
-        elements.remove(index);
+   void retrieveEllement(int index) {
+       System.out.println(elements.get(index));
     }
 
 }
