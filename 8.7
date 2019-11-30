@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> array1 = new ArrayList<Integer>();
+		ArrayList<Integer> array2 = new ArrayList<Integer>();
+		array1.add(4);
+		array2.add(5);
+
+	}
+
+	public static ArrayList<Integer> join(ArrayList<Integer> array1, ArrayList<Integer> array2) {
+		ArrayList<Integer> array3 = new ArrayList<Integer>();
+		array3.addAll(array1);
+		array3.addAll(array2);
+		return array3;
+	}
+}
