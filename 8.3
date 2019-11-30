@@ -1,0 +1,42 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Array_List array = new Array_List();
+        array.insertElement(4);
+        array.insertElement(5);
+        array.insertElement(6);
+        array.insertElement(7);
+
+        array.printElements();
+
+        array.retrieveEllement(2);
+
+        System.out.println();
+        
+        array.printElements();
+
+    }
+}
+
+import java.util.ArrayList;
+
+public class Array_List {
+    ArrayList<Integer> elements = new ArrayList<>();
+
+    void insertElement(int element) {
+        elements.add(0, element);
+    }
+
+    void printElements() {
+        for (int i = 0; i < elements.size(); i++) {
+            System.out.println(elements.get(i));
+        }
+    }
+
+    void retrieveEllement(int index) {
+        elements.remove(index);
+    }
+
+}
