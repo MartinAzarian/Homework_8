@@ -1,0 +1,29 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Colors color = new Colors();
+        color.setColors("red");
+        color.setColors("green");
+        color.setColors("blew");
+        color.printColors();
+
+    }
+}
+import java.util.ArrayList;
+
+public class Colors {
+    ArrayList<String> colors = new ArrayList<String>();
+
+    void setColors(String color) {
+        colors.add(color);
+    }
+
+    void printColors() {
+        for (int i = 0; i < colors.size(); i++) {
+            System.out.println(colors.get(i));
+        }
+    }
+    
+}
