@@ -1,0 +1,134 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+ public static void main(String[] args) {
+  Cat cat1 = new Cat("jnasfsdjdnaky");
+  Cat cat2 = new Cat("jnasjdna");
+  Cat cat3 = new Cat("jnasjdnaca nd ask");
+  Cat cat4 = new Cat("jnasjdnaasasdsad");
+  Cat cat5 = new Cat("jnasjdfsdnadsfds");
+
+  ArrayList<Cat> cats = new ArrayList<>();
+  cats.add(cat1);
+  cats.add(cat2);
+  cats.add(cat3);
+  cats.add(cat4);
+  cats.add(cat5);
+
+  Dog dog1 = new Dog("jnasfsdjdnaky");
+  Dog dog2 = new Dog("jnasjdna");
+  Dog dog3 = new Dog("jnasjdnaca nd ask");
+
+  ArrayList<Dog> dogs = new ArrayList<>();
+  dogs.add(dog1);
+  dogs.add(dog2);
+  dogs.add(dog3);
+
+  Cat cat = new Cat("Asd");
+  cat.setCats(cats);
+  Dog dog = new Dog("asd");
+  dog.setDogs(dogs);
+
+
+ }
+}
+package com.company;
+
+import java.util.ArrayList;
+
+public class Animal {
+    private String name;
+    private ArrayList<Cat> cats = new ArrayList<>();
+    private ArrayList<Dog> dogs = new ArrayList<>();
+    public ArrayList<Animal> animals = new ArrayList<>();
+    public animals.add(cats);
+    public animals.add(dogs);
+
+    public ArrayList<Cat> getCats() {
+        return cats;
+    }
+
+    public void setCats(ArrayList<Cat> cats) {
+        this.cats = cats;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Dog> getDogs() {
+        return dogs;
+    }
+
+    public void setDogs(ArrayList<Dog> dogs) {
+        this.dogs = dogs;
+    }
+
+    public ArrayList<Animal> getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(ArrayList<Animal> animals) {
+        this.animals = animals;
+    }
+
+}
+package com.company;
+
+import java.util.ArrayList;
+
+public class Dog extends Animal {
+    public String name;
+    public ArrayList<Dog> dogs = new ArrayList<>();
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public void setDogs(ArrayList<Dog> dogs) {
+        this.dogs = dogs;
+    }
+
+    public void printDogs() {
+        for (int i = 0; i < dogs.size(); i++) {
+            System.out.println(dogs.get(i).name);
+        }
+    }
+
+    public Dog() {
+    }
+
+}
+package com.company;
+
+import java.util.ArrayList;
+
+public class Dog extends Animal {
+    public String name;
+    public ArrayList<Dog> dogs = new ArrayList<>();
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public void setDogs(ArrayList<Dog> dogs) {
+        this.dogs = dogs;
+    }
+
+    public void printDogs() {
+        for (int i = 0; i < dogs.size(); i++) {
+            System.out.println(dogs.get(i).name);
+        }
+    }
+
+    public Dog() {
+    }
+
+}
