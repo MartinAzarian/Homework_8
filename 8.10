@@ -1,0 +1,53 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Dog dog1 = new Dog("Lucky");
+        Dog dog2 = new Dog("Rex");
+        Dog dog3 = new Dog("Black");
+        Dog dog4 = new Dog("asdas");
+        Dog dog5 = new Dog("dsad");
+
+        ArrayList<Dog> dogs = new ArrayList<>();
+        dogs.add(dog1);
+        dogs.add(dog2);
+        dogs.add(dog3);
+        dogs.add(dog4);
+        dogs.add(dog5);
+
+        dog1.setDogs(dogs);
+
+        dog1.printDogs();
+
+    }
+}
+
+public abstract class Animal {
+
+    public abstract void printDogs();
+
+
+}
+
+
+public class Dog extends Animal {
+    public String name;
+    public ArrayList<Dog> dogs = new ArrayList<>();
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public void setDogs(ArrayList<Dog> dogs) {
+        this.dogs = dogs;
+    }
+
+    public void printDogs() {
+        for (int i = 0; i < dogs.size(); i++) {
+            System.out.println(dogs.get(i).name);
+        }
+    }
+}
