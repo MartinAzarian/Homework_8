@@ -1,0 +1,58 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cat cat1 = new Cat("jnasfsdjdnaky");
+        Cat cat2 = new Cat("jnasjdna");
+        Cat cat3 = new Cat("jnasjdnaca nd ask");
+        Cat cat4 = new Cat("jnasjdnaasasdsad");
+        Cat cat5 = new Cat("jnasjdfsdnadsfds");
+
+        ArrayList<Cat> cats = new ArrayList<>();
+        cats.add(cat1);
+        cats.add(cat2);
+        cats.add(cat3);
+        cats.add(cat4);
+        cats.add(cat5);
+
+        cat1.setDogs(cats);
+
+        cat1.printCats();
+
+    }
+}
+package com.company;
+
+public abstract class Animal {
+
+    public abstract void printCats();
+
+
+
+}
+package com.company;
+
+import java.util.ArrayList;
+
+public class Cat {
+    public String name;
+    public ArrayList<Cat> cats = new ArrayList<>();
+
+    public Cat(String name) {
+        this.name = name;
+    }
+
+    public void setDogs(ArrayList<Cat> cats) {
+        this.cats = cats;
+    }
+
+    public void printCats() {
+        for (int i = 0; i < cats.size(); i++) {
+            System.out.println(cats.get(i).name);
+        }
+    }
+
+}
