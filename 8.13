@@ -1,0 +1,76 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public abstract class Hospital {
+    private String name;
+    private int age;
+    public String  getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+    private ArrayList<Pacient> pacients = new ArrayList <>();
+    private ArrayList<Director> directors = new ArrayList <>();
+
+    public ArrayList<Pacient> getPacients() {
+        return pacients;
+    }
+
+    public void setPacients(ArrayList<Pacient> pacients) {
+        this.pacients = pacients;
+    }
+
+    public ArrayList<Director> getDirectors() {
+        return directors;
+    }
+
+    public void setDirectors(ArrayList<Director> directors) {
+        this.directors = directors;
+    }
+
+    public ArrayList<Doctor> getDoctors() {
+        return doctors;
+    }
+
+    public void setDoctors(ArrayList<Doctor> doctors) {
+        this.doctors = doctors;
+    }
+
+    private ArrayList<Doctor> doctors = new ArrayList <>();
+
+}
+
+public class Pacient extends Hospital{
+
+
+
+}
+ackage com.company;
+
+public class Doctor extends Hospital{
+}
+package com.company;
+
+public class Director extends Hospital{
+}
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	Pacient pac = new Pacient();
+	pac.setAge(18);
+	pac.setName("Jhon");
+    }
+}
